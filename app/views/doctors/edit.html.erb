@@ -1,0 +1,11 @@
+<h1>Edit Dr. <%= @doctor.name %>&#39;s Info</h1>
+<hr />
+<%= form_with(model: @doctor, local: true, class: "ui form" )  do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, autofocus: true %>
+    <%= f.label :specialty %>
+    <%= f.text_field :specialty, required: true %>
+  </div>
+  <%= f.submit class: "ui blue button inverted" %>
+<% end %>
